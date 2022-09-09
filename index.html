@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joker | Landing Page UI Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="https://www.netflix.com/id/" class="logo"><img src="logo.png" /></a>
+      <div class="toggle"><img src="toggle.png" /></div>
+    </header>
+
+    <div class="banner">
+      <div class="content">
+        <h2>Put on a <span>Happy</span> face</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam quasi consectetur repudiandae iure. Eveniet consectetur voluptatibus modi quia. Voluptas consequuntur expedita illo harum dicta quaerat nisi sequi dolorum
+          esse!
+        </p>
+        <a href="#" class="play" onclick="toggle();"><img src="play.png" />Wach Trailer</a>
+
+        <div class="slide"></div>
+        <ul class="sci">
+          <li>
+            <a href="https://www.facebook.com/"><img src="facebook.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="twitter.png" /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/auliarthaaa/"><img src="instagram.png" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="trailer">
+      <video src="trailer.mp4" controls="true"></video>
+      <img src="close.png" class="close" onclick="toggle();" />
+    </div>
+
+    <script type="text/javascript">
+      function toggle() {
+        var trailer = document.querySelector(".trailer");
+        var video = document.querySelector("video");
+        trailer.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+  </body>
+</html>
